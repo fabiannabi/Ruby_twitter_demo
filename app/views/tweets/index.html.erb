@@ -1,0 +1,17 @@
+<h1>tweets</h1>
+<a href="<%=new_tweet_path%>">
+  <button>New tweet</button>
+</a>
+<%@tweets.each do |tweet| %>
+  <div class="container">
+    <div class="jumbotron">
+      <h3 class="lead">USER</h3>
+    </div>
+    <p><%=tweet.content%></p>
+    <h1><%=tweet.created_at.to_date%></h1>
+  </div>
+  <div class="">
+    <%=link_to "Editar", edit_tweet_path(tweet)%>
+    <%=link_to "Borrar", tweet_path(tweet), method: :delete%>
+  </div>
+<%end%>

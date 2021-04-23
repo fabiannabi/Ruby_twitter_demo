@@ -1,0 +1,11 @@
+<h1>Edit TWEET</h1>
+<%=form_for @tweet do %>
+  <label>Content: </label>
+  <input
+    ype="text"
+    value = "<%=@tweet.content%>"
+    name="content">
+  </input>
+  <button type="submit">Tweet</button>
+
+<%end%>
